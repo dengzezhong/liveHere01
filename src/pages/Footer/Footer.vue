@@ -1,7 +1,7 @@
 <template>
     <footer>
         <router-link to='home'><van-icon name="wap-home-o" /><br> 首页</router-link>
-        <router-link to='fair'><van-icon name="cart-circle-o" /><br>友邻市集555</router-link>
+        <router-link to='fair'><van-icon name="cart-circle-o" /><br>友邻市集</router-link>
         <router-link to='steward'><van-icon name="comment-o" /><br>管家你好</router-link>
         <router-link to='community'><van-icon name="send-gift-o" /><br>社区</router-link>
         <router-link to='my'><van-icon name="user-o" /><br>我</router-link>
