@@ -7,7 +7,7 @@
     <div class="top">
        <router-link to="../Home">江南强少</router-link>
        <br>
-       <router-link to="../Fair">杭州魅力新城111</router-link>
+       <router-link to="../Fair">杭州魅力新城</router-link>
     </div>
   </div>
 </template>
