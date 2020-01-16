@@ -125,7 +125,7 @@ export default {};
         display: flex;
         div{
             width 2.7rem
-            height 3rem
+            height 3.1rem
             margin-right 0.28rem
             border-radius 0.15rem
         }
