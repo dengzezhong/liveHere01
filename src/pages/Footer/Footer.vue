@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-01-15 18:55:33
- * @LastEditTime : 2020-01-16 09:16:15
+ * @LastEditTime : 2020-01-16 09:42:33
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \liveHere01\src\pages\Footer\Footer.vue
@@ -13,7 +13,7 @@
         <router-link to='fair'><van-icon name="cart-circle-o" /><br>友邻市集</router-link>
         <router-link to='steward'><van-icon name="comment-o" /><br>管家你好</router-link>
         <router-link to='community'><van-icon name="send-gift-o" /><br>社区</router-link>
-        <router-link to='my'><van-icon name="user-o" /><br>我</router-link>
+        <router-link to='my'><van-icon name="user-o" /><br>我111</router-link>
     </footer>
 </template>
 
