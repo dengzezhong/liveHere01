@@ -1,6 +1,11 @@
 <template>
-    <div>
-        我的展示区0001
-    </div>
+  <Usemame />
 </template>
-
+<script>
+import Usemame from "./MyUsername";
+export default {
+  components: {
+    Usemame
+  }
+};
+</script>
