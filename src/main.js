@@ -5,7 +5,6 @@ import './assets/js/rem'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import './assets/css/assets_use.styl'
-
 Vue.use(Vant)
 
 

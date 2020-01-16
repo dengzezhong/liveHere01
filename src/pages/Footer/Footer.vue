@@ -13,7 +13,7 @@
         <router-link to='fair'><van-icon name="cart-circle-o" /><br>友邻市集</router-link>
         <router-link to='steward'><van-icon name="comment-o" /><br>管家你好</router-link>
         <router-link to='community'><van-icon name="send-gift-o" /><br>社区</router-link>
-        <router-link to='my'><van-icon name="user-o" /><br>我111</router-link>
+        <router-link to='my'><van-icon name="user-o" /><br>我的</router-link>
     </footer>
 </template>
 
@@ -26,23 +26,23 @@ export default {
 <style lang="stylus" scoped>
 footer 
     width 100%
-    height .58rem
-    padding-bottom .04rem
+    height 1.16rem
+    padding-bottom .08rem
     display flex
     justify-content space-around
     align-items flex-end
-    border-top .01rem solid #d8d8d8
+    border-top .02rem solid #d8d8d8
     position fixed
     bottom 0
     left 0
     background #fff
     a
         text-align center
-        font-size .1rem
+        font-size .2rem
         color #696969
         text-decoration none
         .van-icon
-            font-size .32rem
+            font-size .64rem
  a.router-link-active{
     color: #f66;
   }
