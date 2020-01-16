@@ -4,6 +4,8 @@ import Fair from '../pages/view/Fair/Fair'
 import My from '../pages/view/My/My'
 import Steward from '../pages/view/Steward/Steward'
 import Community from '../pages/view/Community/Community'
+import UserServe from '../pages/view/Home/UserServer/UserServe'
+import Open from '../pages/view/Home/UserServer/Open'
 
 // 路由表
 const routes = [{
@@ -25,11 +27,22 @@ const routes = [{
     {
         path: '/community',
         component: Community
+
     },
     {
         path: '*',
         redirect: '/home'
+    },
+    // 首页内，便民服务内路由
+    {
+        path: '/userserve',
+        component: UserServe
+    },
+    {
+        path: '/open',
+        component: Open
     }
+
 ]
 
 // 暴露路由表
