@@ -1,7 +1,7 @@
 <template>
   <div class="search_box">
     <div>
-      <router-link class="page_search" to='/search'>
+      <router-link class="page_search" to='/fair_search'>
         <van-icon name="search" />搜索商品
 
       </router-link>
@@ -10,22 +10,22 @@
       </div> -->
     </div>
     <div>
-      <router-link class="search_btn_cart1" to='home'>
+      <router-link class="search_btn_cart1" to='1'>
         <van-icon name="cart-o" />
       </router-link>
 
-      <router-link class="search_btn_cart2" to='home'>
-         <van-icon name="cart-o" />
+      <router-link class="search_btn_cart2" to='1'>
+        <van-icon name="cart-o" />
       </router-link>
-<router-view></router-view>
+      <router-view></router-view>
     </div>
   </div>
 </template>
 <script>
 export default {
-  created(){
+  created () {
     console.log(this.$route.params.sid);
-}
+  }
 }
 </script>
 <style lang="stylus" scoped>

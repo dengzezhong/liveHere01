@@ -16,18 +16,63 @@ const routes = [{
   }
 },
 {
+  //商城首页//
   path: '/fair',
   component: () => import("../pages/view/Fair/Fair_index/Fair_index"),
-  children: [{
-    path: "search",
-    component: () => import("../pages/view/Fair/components/index_search"),
-    name: 'search'
-  }]
+  meta: {
+    footerShow: true
+  },
+  children: [
+    {//集市区块
+      path: "market",
+      component: () => import("../pages/view/Fair/Fair_index/index_market"),
+      name: "market",
+      meta: {
+        marketMain: true,//市集区
+        communityMain: false,//社区拼团区
+        convenienceMain: false,//便利区
+        footerShow: true
+      },
+      components: {
+        market: () => import("../pages/view/Fair/Fair_index/index_market"),
+      }
+    },
+    {//便利区块
+      path: "convenience",
+      component: () => import("../pages/view/Fair/Fair_index/index_convenience"),
+      name: "convenience",
+      meta: {
+        marketMain: false,//市集区
+        communityMain: true,//社区拼团区
+        convenienceMain: false,//便利区
+        footerShow: true
+      },
+      components: {
+        market: () => import("../pages/view/Fair/Fair_index/index_convenience"),
+      }
+    },
+    {//社区活动区块
+      path: "fair_community",
+      component: () => import("../pages/view/Fair/Fair_index/index_community"),
+      name: "community",
+      meta: {
+        marketMain: false,//市集区
+        communityMain: false,//社区拼团区
+        convenienceMain: true,//便利区
+        footerShow: true
+      },
+      components: {
+        market: () => import("../pages/view/Fair/Fair_index/index_community"),
+      }
+    },
+  ]
 },
 {
-  path: "/search",
+  //商城搜索//
+  path: "/fair_search",
   component: () => import("../pages/view/Fair/components/index_search"),
-  name: 'search'
+  name: 'search',
+
 },
 {
   path: '/my',
@@ -39,11 +84,11 @@ const routes = [{
 {
   path: '/steward',
   component: Steward,
-  // children: [{
-  //     name: 'welcome',
-  //     path: '/steward/welcome',
-  //     component: Welcome
-  // }]
+  children: [{
+    name: 'welcome',
+    path: '/steward/welcome',
+    component: Welcome
+  }],
   meta: {
     footerShow: true
   }

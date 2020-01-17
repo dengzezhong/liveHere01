@@ -5,7 +5,9 @@ import './assets/js/rem'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import './assets/css/assets_use.styl'
+import { Lazyload } from "vant";
 Vue.use(Vant)
+Vue.use(Lazyload)
 
 
 new Vue({
