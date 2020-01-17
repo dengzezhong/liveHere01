@@ -3,7 +3,7 @@
 <template>
  <div id="app">
     <router-view></router-view>
-    <Footer/>
+    <Footer v-if="$route.meta.footerShow"/>
  </div>
 </template>
 
