@@ -7,7 +7,7 @@
     <div class="container">
       <img src="../../../assets/img/hello.png" alt />
       <p>管家一键呼叫是睿服务提供的贴心功能，你可以通过住这儿快速找到你的管家，提供一对一服务。此功能需要确认门牌号才能使用，现在确认吗？</p>
-      <router-link :to="{ name: 'welcome' }" class="comfirm">确认门牌号</router-link>
+      <router-link :to="{ name: 'steward_welcome' }" class="comfirm">确认门牌号</router-link>
       <!-- <router-view /> -->
     </div>
   </div>

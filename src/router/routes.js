@@ -1,12 +1,10 @@
 // 引入组件
 import Home from '../pages/view/Home/Home'
-import Fair from '../pages/view/Fair/Fair'
+import Fair from '../pages/view/Fair/Fair_index/Fair_index'
 import My from '../pages/view/My/My'
 import Steward from '../pages/view/Steward/Steward'
 import Community from '../pages/view/Community/Community'
 import Welcome from '../pages/view/Steward/Steward_welcome'
-import Invite from '../pages/view/Home/Services/Invite.vue'
-import toInvite from '../pages/view/Home/Services/toInvite.vue'
 
 // 路由表
 const routes = [{
@@ -43,7 +41,7 @@ const routes = [{
     }
 },
 {
-    name: 'welcome',
+    name: 'steward_welcome',
     path: '/steward/welcome',
     component: Welcome
 },
@@ -61,13 +59,19 @@ const routes = [{
         footerShow:true
     }
 },
+//首页服务中的访客邀请
 {
     path:'/invite',
-    component:Invite
+    component:()=>import('../pages/view/Home/Services/Invite.vue')
+
 },
 {
     path:'/toInvite',
-    component:toInvite
+    component:()=>import('../pages/view/Home/Services/toInvite.vue')
+},
+{
+    path:'/maintain',
+    component:()=>import('../pages/view/Home/Services/maintain.vue')
 }
 ]
 
