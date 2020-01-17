@@ -5,9 +5,9 @@
   </div>
 </template>
 <script>
-import Search from "./Fair_search.vue";
+import Search from "./index_header";
 export default {
-  components:{
+  components: {
     Search,
   }
 }

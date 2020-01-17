@@ -1,6 +1,5 @@
 // 引入组件
 import Home from '../pages/view/Home/Home'
-import Fair from '../pages/view/Fair/Fair_index/Fair_index'
 import My from '../pages/view/My/My'
 import Steward from '../pages/view/Steward/Steward'
 import Community from '../pages/view/Community/Community'
@@ -12,7 +11,17 @@ const routes = [{
 },
 {
   path: '/fair',
-  component: Fair
+  component: () => import("../pages/view/Fair/Fair_index/Fair_index"),
+  children: [{
+    path: "search",
+    component: () => import("../pages/view/Fair/components/index_search"),
+    name: 'search'
+  }]
+},
+{
+  path: "/search",
+  component: () => import("../pages/view/Fair/components/index_search"),
+  name: 'search'
 },
 {
   path: '/my',
