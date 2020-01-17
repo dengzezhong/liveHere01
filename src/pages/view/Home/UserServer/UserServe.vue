@@ -1,7 +1,7 @@
 <template>
     <div>
         返回上一级
-        查看更多
+        <div class="fa fa-spinner fa-spin">查看更多</div>
     </div>
 </template>
 
@@ -12,5 +12,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
 </style>

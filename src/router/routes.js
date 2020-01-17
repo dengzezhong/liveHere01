@@ -6,6 +6,8 @@ import Community from '../pages/view/Community/Community'
 import Welcome from '../pages/view/Steward/Steward_welcome'
 import Invite from '../pages/view/Home/Services/Invite.vue'
 import toInvite from '../pages/view/Home/Services/toInvite.vue'
+import UserServe from '../pages/view/Home/UserServer/UserServe'
+import Open from '../pages/view/Home/UserServer/Open'
 
 // 路由表
 const routes = [{
