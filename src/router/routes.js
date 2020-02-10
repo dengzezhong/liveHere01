@@ -1,78 +1,148 @@
 // 引入组件
 import Home from '../pages/view/Home/Home'
-import Fair from '../pages/view/Fair/Fair_index/Fair_index'
 import My from '../pages/view/My/My'
 import Steward from '../pages/view/Steward/Steward'
 import Community from '../pages/view/Community/Community'
 import Welcome from '../pages/view/Steward/Steward_welcome'
+import Invite from '../pages/view/Home/Services/Invite.vue'
+import toInvite from '../pages/view/Home/Services/toInvite.vue'
+import UserServe from '../pages/view/Home/UserServer/UserServe'
+import Open from '../pages/view/Home/UserServer/Open'
 
 // 路由表
 const routes = [{
-    path: '/home',
-    component: Home,
-    meta:{
-        footerShow:true
-    }
-},
-{
-    path: '/fair',
-    component: Fair,
-    meta:{
-        footerShow:true
-    }
-},
-{
-    path: '/my',
-    component: My,
-    meta:{
-        footerShow:true
-    }
-},
-{
-    path: '/steward',
-    component: Steward,
-    // children: [{
-    //     name: 'welcome',
-    //     path: '/steward/welcome',
-    //     component: Welcome
-    // }]
-    meta:{
-        footerShow:true
-    }
-},
-{
-    name: 'steward_welcome',
-    path: '/steward/welcome',
-    component: Welcome
-},
-{
-    path: '/community',
-    component: Community,
-    meta:{
-        footerShow:true
-    }
-},
-{
-    path: '*',
-    redirect: '/home',
-    meta:{
-        footerShow:true
-    }
-},
-//首页服务中的访客邀请
-{
-    path:'/invite',
-    component:()=>import('../pages/view/Home/Services/Invite.vue')
+        path: '/home',
+        component: Home,
+        meta: {
+            footerShow: true
+        }
+    },
+    {
+        //商城首页//
+        path: '/fair',
+        component: () =>
+            import ("../pages/view/Fair/Fair_index/Fair_index"),
+        meta: {
+            footerShow: true
+        },
+        children: [{ //集市区块
+                path: "market",
+                component: () =>
+                    import ("../pages/view/Fair/Fair_index/index_market"),
+                name: "market",
+                meta: {
+                    marketMain: true, //市集区
+                    communityMain: false, //社区拼团区
+                    convenienceMain: false, //便利区
+                    footerShow: true
+                },
+                components: {
+                    market: () =>
+                        import ("../pages/view/Fair/Fair_index/index_market"),
+                }
+            },
+            { //便利区块
+                path: "convenience",
+                component: () =>
+                    import ("../pages/view/Fair/Fair_index/index_convenience"),
+                name: "convenience",
+                meta: {
+                    marketMain: false, //市集区
+                    communityMain: true, //社区拼团区
+                    convenienceMain: false, //便利区
+                    footerShow: true
+                },
+                components: {
+                    market: () =>
+                        import ("../pages/view/Fair/Fair_index/index_convenience"),
+                }
+            },
+            { //社区活动区块
+                path: "fair_community",
+                component: () =>
+                    import ("../pages/view/Fair/Fair_index/index_community"),
+                name: "community",
+                meta: {
+                    marketMain: false, //市集区
+                    communityMain: false, //社区拼团区
+                    convenienceMain: true, //便利区
+                    footerShow: true
+                },
+                components: {
+                    market: () =>
+                        import ("../pages/view/Fair/Fair_index/index_community"),
+                }
+            },
+        ]
+    },
+    {
+        //商城搜索//
+        path: "/fair_search",
+        component: () =>
+            import ("../pages/view/Fair/components/index_search"),
+        name: 'search',
 
-},
-{
-    path:'/toInvite',
-    component:()=>import('../pages/view/Home/Services/toInvite.vue')
-},
-{
-    path:'/maintain',
-    component:()=>import('../pages/view/Home/Services/maintain.vue')
-}
+    },
+    {
+        path: '/my',
+        component: My,
+        meta: {
+            footerShow: true
+        }
+    },
+    //管家你好
+    {
+        path: '/steward',
+        component: Steward,
+        meta:{
+            footerShow:true
+        }
+    },
+    //管家你好
+    {
+        name: 'steward_welcome',
+        path: '/steward/welcome',
+        component: Welcome
+    },
+    {
+        path: '/community',
+        component: Community,
+        meta:{
+            footerShow:true
+        }
+    },
+    {
+        path: '*',
+        redirect: '/home',
+        meta:{
+            footerShow:true
+        }
+    },
+    //首页服务中的访客邀请
+    {
+        path:'/invite',
+        component:()=>import('../pages/view/Home/Services/Invite.vue')
+    
+    },
+    {
+        path:'/toInvite',
+        component:()=>import('../pages/view/Home/Services/toInvite.vue')
+    },
+    //首页服务中的维修
+    {
+        path:'/maintain',
+        component:()=>import('../pages/view/Home/Services/maintain.vue')
+    }
+    // 首页内，便民服务内路由
+    {
+        path: '/userserve',
+        component: UserServe
+    },
+    {
+        path: '/open',
+        component: Open
+    }
+
 ]
 
 // 暴露路由表
